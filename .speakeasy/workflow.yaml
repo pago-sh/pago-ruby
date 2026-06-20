@@ -1,21 +1,21 @@
 workflowVersion: 1.0.0
 speakeasyVersion: latest
 sources:
-    Polar-OAS:
+    Pago-OAS:
         inputs:
-            - location: https://api.polar.sh/openapi.json
+            - location: https://api.pago.sh/openapi.json
         overlays:
-            - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/security.yml
-            - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/type_parameter.yml
-            - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/product_price_discriminator.yml
-            - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/read_only.yml
+            - location: https://raw.githubusercontent.com/pago-sh/pago/main/sdk/overlays/security.yml
+            - location: https://raw.githubusercontent.com/pago-sh/pago/main/sdk/overlays/type_parameter.yml
+            - location: https://raw.githubusercontent.com/pago-sh/pago/main/sdk/overlays/product_price_discriminator.yml
+            - location: https://raw.githubusercontent.com/pago-sh/pago/main/sdk/overlays/read_only.yml
         registry:
-            location: registry.speakeasyapi.dev/polar/polar/polar-oas
+            location: registry.speakeasyapi.dev/pago/pago/pago-oas
 targets:
-    polar:
+    pago:
         target: ruby
-        source: Polar-OAS
+        source: Pago-OAS
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/polar/polar/polar-api-ruby-code-samples
+                location: registry.speakeasyapi.dev/pago/pago/pago-api-ruby-code-samples
             blocking: false
